@@ -529,3 +529,43 @@ git commit -m "first commit"
 git remote add origin https://github.com/coolitea/egov-next.git
 git push -u origin master
 ```
+
+### 클라이언트 서버 추가
+
+```bash
+yarn add express
+```
+
+yarn add v1.16.0
+[1/4] 🔍 Resolving packages...
+[2/4] 🚚 Fetching packages...
+[3/4] 🔗 Linking dependencies...
+[4/4] 🔨 Building fresh packages...
+success Saved lockfile.
+success Saved 22 new dependencies.
+info Direct dependencies
+└─ express@4.16.4
+info All dependencies
+├─ accepts@1.3.7
+├─ array-flatten@1.1.1
+├─ body-parser@1.18.3
+├─ content-disposition@0.5.2
+├─ cookie-signature@1.0.6
+├─ cookie@0.3.1
+├─ express@4.16.4
+├─ finalhandler@1.1.1
+├─ forwarded@0.1.2
+├─ ipaddr.js@1.9.0
+├─ media-typer@0.3.0
+├─ merge-descriptors@1.0.1
+├─ methods@1.1.2
+├─ mime-db@1.40.0
+├─ negotiator@0.6.2
+├─ path-to-regexp@0.1.7
+├─ proxy-addr@2.0.5
+├─ raw-body@2.3.3
+├─ serve-static@1.13.2
+├─ unpipe@1.0.0
+├─ utils-merge@1.0.1
+└─ vary@1.1.2
+✨ Done in 3.07s.

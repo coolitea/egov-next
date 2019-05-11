@@ -7,6 +7,7 @@ const About = () => (
       <title>About | eGov Service</title>
     </Head>
     <h1>About page</h1>
+    <p>lorem ipsum</p>
   </div>
 );
 
