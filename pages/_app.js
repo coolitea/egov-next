@@ -1,7 +1,7 @@
 import App, { Container } from 'next/app';
-import Header from '../components/Header';
 import React from 'react';
-
+import { Layout } from 'antd';
+const { Footer } = Layout;
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
@@ -10,12 +10,24 @@ export default class MyApp extends App {
     }
     return { pageProps };
   }
+
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(result => console.log('SW Registered: ', result))
+        .catch(error => console.log("Can't register SW: ", error));
+    }
+  }
+
   render() {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <Header />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+          <Footer>This is important footer</Footer>
+        </Layout>
       </Container>
     );
   }
